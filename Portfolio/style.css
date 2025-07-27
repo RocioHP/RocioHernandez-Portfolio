@@ -117,16 +117,10 @@ html, body {
     background: var(--color-background-base);
     min-width: 0;
     overflow: hidden;
-}
-
-.main-photo {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    max-width: 100vw;
-    max-height: 100vh;
+    background-image: url('images/main-photo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -742,6 +736,90 @@ html, body {
     box-shadow: var(--shadow-medium);
 }
 
+/* ===== 1366×768 VIEWPORT OPTIMIZATION ===== */
+@media (width: 1366px) and (height: 768px) {
+    /* Adjust section heights for 1366×768 */
+    .main {
+        min-height: 768px;
+    }
+    
+    .about {
+        min-height: 768px;
+    }
+    
+    .restaurant {
+        min-height: 600px;
+    }
+    
+    .socialmedia {
+        min-height: 600px;
+    }
+    
+    .travel {
+        min-height: 600px;
+    }
+    
+    .contact {
+        height: 768px;
+    }
+    
+    /* Adjust font sizes for better fit */
+    .name {
+        font-size: clamp(3rem, 8vw, 6rem);
+        margin: 10vh 0 0.5em 0;
+    }
+    
+    .about-quote {
+        font-size: 2.5rem;
+    }
+    
+    .socialmedia-title {
+        font-size: 4rem;
+        margin: 6vw 0 4vw 0;
+    }
+    
+    .travel-title {
+        font-size: 4rem;
+        margin: 6vw 0 4vw 0;
+    }
+    
+    .contact-title {
+        font-size: 4rem;
+    }
+    
+    /* Adjust image sizes */
+    .about-photo {
+        width: 350px;
+        margin-top: 8em;
+    }
+    
+    .work-laptop {
+        width: 700px;
+    }
+    
+    .work-fullpage {
+        width: 420px;
+    }
+    
+    .travel-devices {
+        width: 700px;
+    }
+    
+    .contact-photo {
+        width: 450px;
+    }
+    
+    /* Adjust carousel for better fit */
+    .carousel-wrapper {
+        width: 1200px;
+    }
+    
+    .carousel-card {
+        flex: 0 0 400px;
+        max-width: 400px;
+    }
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 900px) {
     /* Hero Section */
@@ -753,10 +831,6 @@ html, body {
         width: 100vw;
         min-width: 0;
         padding: 6vw 4vw 2vw 4vw;
-    }
-    .main-photo {
-        height: 40vh;
-        max-height: 50vw;
     }
     
     /* About Section */
@@ -863,80 +937,331 @@ html, body {
     }
 }
 
+/* ===== MOBILE OPTIMIZATION (360×800) ===== */
 @media (max-width: 600px) {
+    /* Global adjustments for mobile */
+    html, body {
+        font-size: 1rem;
+    }
+    
     /* Hero Section */
     .main {
         flex-direction: column;
+        height: 100vh;
+        min-height: 100vh;
+        display: flex;
+        
     }
     .main-left {
-        padding: 8vw 4vw 2vw 4vw;
+        padding: 8vw 6vw 0vw 6vw;
+        justify-content: flex-start;
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+    .main-right {
+        padding: 0;
+        flex: 1 1 0;
+        min-height: 0;
+        
+       
+        justify-content: center;
+        background-image: url('images/main-photo.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .name {
-        font-size: clamp(2.88rem, 17.28vw, 5.04rem);
+        font-size: clamp(3.5rem, 17vw, 5rem);
+        margin: 8vh 0 0.5em 0;
+        line-height: 1.1;
     }
-    .main-photo {
-        height: 32vh;
-        max-height: 60vw;
+    .subtitle {
+        font-size: 0.98rem;
+        margin-top: 2em;
+        margin-bottom: 0;
+        max-width: 100%;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+        border-bottom: none;
     }
     
     /* About Section */
     .about {
         flex-direction: column;
+        padding: 0;
     }
-    .about-left, .about-right {
-        padding: 8vw 4vw 2vw 4vw;
+    .about-left {
+        padding: 8vw 6vw 4vw 6vw;
+        order: 2;
+    }
+    .about-right {
+        padding: 8vw 6vw 4vw 6vw;
+        order: 1;
+        margin-bottom: 0;
     }
     .about-photo {
-        width: 98vw;
-        margin-top: 4em;
+        width: 280px;
+        max-width: 90vw;
+        margin-top: 2em;
+        margin-bottom: 2em;
     }
     .about-quote {
-        font-size: var(--font-size-2xl);
+        font-size: 1.8rem;
+        margin: 1em 0;
+        line-height: 1.3;
+    }
+    .about-desc {
+        font-size: 1.1rem;
+        margin: 0 0 1em 0;
+        line-height: 1.5;
     }
     .about-right::before {
-        width: 60vw;
-        height: 60vw;
-        top: -30vw;
-        right: -30vw;
+        width: 50vw;
+        height: 50vw;
+        top: -25vw;
+        right: -25vw;
     }
     
     /* Work Section */
     .restaurant {
         flex-direction: column;
+        padding: 0;
     }
-    .restaurant-left, .restaurant-right {
-        padding: 8vw 4vw;
+    .restaurant-left {
+        padding: 8vw 6vw 4vw 6vw;
+        order: 2;
+        align-items: flex-start;
+    }
+    .restaurant-right {
+        padding: 8vw 6vw 4vw 6vw;
+        order: 1;
+        align-items: flex-start;
     }
     .work-laptop {
-        width: 98vw;
+        width: 100vw;
+        max-width: 100vw;
+        margin: 0 0 2vw 0;
     }
     .work-fullpage {
-        width: 98vw;
+        width: 90vw;
+        max-width: 90vw;
+        margin: 0 0 2vw 0;
     }
     .work-btn {
         width: 100%;
         font-size: 1rem;
         padding: 1em 0;
+        margin: 2em 0 0 0;
+        text-align: center;
     }
     .work::after {
-        width: 60vw;
-        height: 120vw;
-        right: -32vw;
-        border-top-left-radius: 30vw 60vw;
-        border-bottom-left-radius: 30vw 60vw;
+        width: 50vw;
+        height: 100vw;
+        right: -25vw;
+        border-top-left-radius: 25vw 50vw;
+        border-bottom-left-radius: 25vw 50vw;
     }
     
     /* Social Media Section */
     .socialmedia {
         flex-direction: column;
+        padding: 0;
     }
-    .socialmedia-left, .socialmedia-right {
-        padding: 8vw 4vw;
+    .socialmedia-left {
+        padding: 8vw 6vw 4vw 6vw;
+        order: 2;
+    }
+    .socialmedia-right {
+        padding: 8vw 6vw 4vw 6vw;
+        order: 1;
+        align-items: flex-start;
+    }
+    .socialmedia-title {
+        font-size: 2.5rem;
+        margin: 2em 0 1em 0;
+        line-height: 1.2;
+    }
+    .socialmedia-desc {
+        padding-right: 0;
+        font-size: 1.1rem;
+        line-height: 1.5;
     }
     .socialmedia-circle {
-        width: 60vw;
-        height: 60vw;
-        left: -30vw;
-        bottom: -30vw;
+        width: 50vw;
+        height: 50vw;
+        left: -25vw;
+        bottom: -25vw;
     }
+    .socialmedia-front-img,
+    .socialmedia-back-img {
+        width: 280px;
+        max-width: 80vw;
+    }
+    .socialmedia-back-img {
+        left: 20px;
+        top: 80px;
+    }
+    .socialmedia-front-img {
+        left: -60px;
+        top: 140px;
+        width: 240px;
+    }
+    
+    /* Carousel Section */
+    .carousel-section {
+        padding: 6vw 4vw;
+    }
+    .carousel-wrapper {
+        width: 100vw;
+        max-width: 100vw;
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+    .carousel-card {
+        flex: 0 0 280px;
+        max-width: 280px;
+        padding: 0 0 1.5em 0;
+    }
+    .carousel-card img {
+        margin-top: 1em;
+    }
+    .carousel-btn {
+        padding: 0.6em 1.5em;
+        font-size: 0.9rem;
+        margin-top: 1em;
+    }
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    .carousel-btn-prev {
+        left: -60px;
+    }
+    .carousel-btn-next {
+        right: -60px;
+    }
+    
+    /* Travel Section */
+    .travel {
+        flex-direction: column;
+        padding: 0;
+    }
+    .travel-left {
+        padding: 8vw 6vw 4vw 6vw;
+        order: 2;
+    }
+    .travel-right {
+        padding: 8vw 6vw 4vw 6vw;
+        order: 1;
+        align-items: flex-start;
+    }
+    .travel-title {
+        font-size: 2.5rem;
+        margin: 2em 0 1em 0;
+        line-height: 1.2;
+    }
+    .travel-desc {
+        font-size: 1.1rem;
+        margin: 0 0 1.5em 0;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+    .travel-devices {
+        width: 100vw;
+        max-width: 100vw;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .travel-phone {
+        width: 120px;
+        max-width: 35vw;
+        right: 10%;
+        top: 20%;
+    }
+    .travel-left::before {
+        width: 50vw;
+        height: 50vw;
+        top: -25vw;
+        right: -25vw;
+    }
+    
+    /* Contact Section */
+    .contact {
+        flex-direction: column;
+        min-height: unset;
+        height: auto;
+    }
+    .contact-left {
+        padding: 8vw 6vw 4vw 6vw;
+        order: 2;
+    }
+    .contact-right {
+        padding: 8vw 6vw 4vw 6vw;
+        order: 1;
+        align-items: center;
+    }
+    .contact-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5em;
+        line-height: 1.2;
+    }
+    .contact-info {
+        gap: 0.5em;
+    }
+    .contact-label {
+        font-size: 1rem;
+        margin-bottom: 0.1em;
+    }
+    .contact-value {
+        font-size: 1rem;
+        margin-bottom: 0.5em;
+    }
+    .contact-photo-bg {
+        width: 100px;
+        height: 100px;
+        left: 10vw;
+        bottom: 10vw;
+    }
+    .contact-photo {
+        width: 180px;
+        max-width: 80vw;
+    }
+}
+
+/* ===== SMALL MOBILE OPTIMIZATION (320px and below) ===== */
+@media (max-width: 320px) {
+    .name {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+    }
+    
+    .about-quote {
+        font-size: 1.5rem;
+    }
+    
+    .socialmedia-title,
+    .travel-title,
+    .contact-title {
+        font-size: 2rem;
+    }
+    
+    .carousel-card {
+        flex: 0 0 250px;
+        max-width: 250px;
+    }
+    
+    .contact-photo {
+        width: 150px;
+    }
+}
+
+/* Ensure all *-left are above *-right in mobile view */
+[class*="left"] {
+    order: 1 !important;
+}
+[class*="right"] {
+    order: 2 !important;
 }

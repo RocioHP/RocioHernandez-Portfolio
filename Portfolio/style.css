@@ -1089,7 +1089,7 @@ html, body {
         max-width: 90vw;
         margin: -11em auto 2vw auto;
     }
-        .work-btn {
+    .work-btn {
         width: 40%;
         font-size: 1rem;
         padding: 1em 0;
@@ -1108,6 +1108,12 @@ html, body {
         border-bottom-left-radius: 50%;
         border-top-right-radius: 50%;
         border-bottom-right-radius: 50%;
+    }
+    .work-desc {
+        padding: 0 2em;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin: 2em 0 2em 0;
     }
     
     /* Social Media Section */

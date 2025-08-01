@@ -1144,13 +1144,7 @@ html, body {
         margin: 0 0.5em;
     }
     
-    .socialmedia-back-img {
-        /* Remove conflicting styles */
-    }
-    
-    .socialmedia-front-img {
-        /* Remove conflicting styles */
-    }
+   
     .socialmedia-title {
         font-size: 2.5rem;
         margin: 0 0 1em 0;
@@ -1244,14 +1238,16 @@ html, body {
         margin: 0 0 1.5em 0;
         line-height: 1.5;
         max-width: 100%;
+        padding-right: 2em;
     }
     
     .travel-btn {
-        font-size: 1.1rem;
-        margin: 0;
-        line-height: 1.5;
-        max-width: 100%;
-        padding: 1em;
+        width: 40%;
+        font-size: 1rem;
+        padding: 1em 0;
+        margin: 0 3em 1em 0;
+        text-align: center;
+        align-self: flex-end;
     }
     .travel-devices {
         width: 90vw;
@@ -1276,17 +1272,17 @@ html, body {
     
     /* Contact Section */
     .contact {
-        flex-direction: column;
+        flex-direction: column-reverse;
         min-height: unset;
         height: auto;
     }
     .contact-left {
-        padding: 8vw 6vw 4vw 6vw;
-        order: 2;
+        padding: 1vw 6vw 4vw 6vw;
+        align-items: flex-start;
     }
     .contact-right {
         padding: 8vw 6vw 4vw 6vw;
-        order: 1;
+        
         align-items: center;
     }
     .contact-title {
@@ -1308,12 +1304,13 @@ html, body {
     .contact-photo-bg {
         width: 100px;
         height: 100px;
-        left: 10vw;
-        bottom: 10vw;
+        left: -5vw;
+        top: -5vw;
     }
     .contact-photo {
-        width: 180px;
-        max-width: 80vw;
+        width: 250px;
+        max-width: 85vw;
+        margin-right: 3em;
     }
     .carousel-btn-prev,
     .carousel-btn-next {

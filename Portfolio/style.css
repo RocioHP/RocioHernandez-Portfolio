@@ -1028,7 +1028,7 @@ html, body {
     .about-left {
         padding: 6vw 6vw 3vw 6vw;
         order: 2;
-        align-items: center;
+        align-items: flex-start;
     }
     
     .about-right {
@@ -1041,8 +1041,10 @@ html, body {
     .about-photo {
         width: 350px;
         max-width: 80vw;
-        margin-top: 3em;
-        margin-bottom: 3em;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+        margin-right: 5em;
+        align-self: flex-end;
     }
     
     .about-quote {
@@ -1058,10 +1060,7 @@ html, body {
     }
     
     .about-right::before {
-        width: 25vw;
-        height: 25vw;
-        top: -12vw;
-        right: -12vw;
+        display: none;
     }
     
     /* Work Section */

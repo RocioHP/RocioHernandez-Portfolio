@@ -1073,7 +1073,7 @@ html, body {
     }
     
     .restaurant-left {
-        padding: 6vw 6vw 3vw 6vw;
+        padding: 2vw 6vw 3vw 6vw;
         order: 2;
         align-items: flex-start;
         background: var(--color-background-gray);
@@ -1089,36 +1089,36 @@ html, body {
     .work-laptop {
         width: 90vw;
         max-width: 90vw;
-        margin: 2em 0 2vw 0;
+        margin: 2em auto 2vw auto;
     }
     
     .work-fullpage {
         width: 70vw;
         max-width: 70vw;
-        margin: -8em auto 2vw auto;
+        margin: -20em auto 2vw auto;
     }
     
     .work-btn {
         font-size: 1.1rem;
         padding: 0.8em 2em;
-        margin: 0 2em 6em 0;
+        margin: 0 2em 20em 0;
         align-self: flex-end;
     }
     
     .work::after {
         width: 40vw;
         height: 40vw;
-        top: -20vw;
+        top: -23vw;
         left: -20vw;
         right: auto;
         border-radius: 50%;
     }
     
     .work-desc {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         line-height: 1.6;
         margin: 2em 0 2em 0;
-        padding: 0 1em;
+        padding: 0 2em;
     }
     
     /* Social Media Section */

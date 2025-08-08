@@ -1142,28 +1142,32 @@ html, body {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 3em;
+        padding: 2em 0 2em 0;
     }
     
-    .socialmedia-front-img,
-    .socialmedia-back-img {
-        width: 35vh;
-        height: 35vh;
-        object-fit: cover;
-        margin: 0 1em;
-        border-radius: 1em;
+    .socialmedia .socialmedia-front-img,
+    .socialmedia .socialmedia-back-img {
+        display: none;
+    }
+    
+    .socialmedia .socialmedia-mobile {
+        display: block;
+        width: 95vw;
+        max-width: 500px;
+        margin: 0 auto;
     }
     
     .socialmedia-title {
-        font-size: 3.5rem;
-        margin: 0 0 1.5em 0;
+        font-size: 3.85rem;
+        margin: 1em 0 0.75em 0;
         line-height: 1.2;
     }
     
     .socialmedia-desc {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         line-height: 1.6;
-        padding-right: 2em;
+        margin: 0 0 2em 0;
+        padding: 0 4em 0 0;
     }
     
     .socialmedia-circle {

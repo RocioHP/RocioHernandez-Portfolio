@@ -61,6 +61,23 @@ html, body {
 }
 
 /* ===== HERO SECTION ===== */
+
+/* Animation for the .name & .subtitle */
+.name,
+.subtitle {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Final visible state */
+.name.active,
+.subtitle.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
 .main {
     display: flex;
     min-height: 100vh;

@@ -8,6 +8,22 @@ const cardWidth = cards[0].offsetWidth + 16; // 16px gap
 const visibleCards = 3;
 const totalCards = cards.length;
 
+/* Animation for the .name & .subtitle */
+document.addEventListener("DOMContentLoaded", () => {
+    const nameElement = document.querySelector(".name");
+    const subtitleElement = document.querySelector(".subtitle");
+    
+   
+    setTimeout(() => {
+      nameElement.classList.add("active");
+    }, 300); 
+
+    setTimeout(() => {
+        subtitleElement.classList.add("active");
+      }, 800);
+  });
+
+
 // Update active dot based on scroll position
 function updateDots() {
     const scrollPosition = carousel.scrollLeft;
@@ -52,3 +68,4 @@ btnNext.addEventListener('click', () => {
         carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
     }
 });
+

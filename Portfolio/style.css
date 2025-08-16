@@ -1237,21 +1237,20 @@ html, body {
     .travel-right {
         padding: 6vw 6vw 3vw 6vw;
         order: 1;
-        align-items: center;
+        align-items: start;
     }
     
     .travel-title {
         font-size: 3.5rem;
-        margin: 0 0 1.5em 0;
+        margin: 0 0 1em 0;
         line-height: 1.2;
     }
     
     .travel-desc {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         line-height: 1.6;
         margin: 0 0 2em 0;
-        max-width: 100%;
-        padding-right: 2em;
+        padding: 0 2em 0 0;
     }
     
     .travel-devices {
@@ -1274,6 +1273,12 @@ html, body {
         height: 25vw;
         top: -12vw;
         right: -12vw;
+    }
+    .travel-btn {
+        font-size: 1.1rem;
+        padding: 0.8em 2em;
+        margin: 0 5em 3em 0;
+        align-self: flex-end;
     }
     
     /* Contact Section */
@@ -1543,14 +1548,14 @@ html, body {
     }
     .carousel-wrapper {
         width: 100%;
-        max-width: 100vw; /* Ensure it doesn't overflow */
+        max-width: 100vw; 
     }
 .carousel-card {
-        flex: 0 0 100%; /* The key rule: Don't grow, don't shrink, be 100% wide */
+        flex: 0 0 100%; 
         max-width: 100%;
-        scroll-snap-align: center; /* A nice touch for smoother snapping on mobile */
+        scroll-snap-align: center; 
         padding: 0 1rem 1.5rem 1rem; 
-        box-sizing: border-box; /* Crucial: includes padding in the 100% width calculation */
+        box-sizing: border-box; 
     }
 .carousel-card img {
         margin-top: 1em;

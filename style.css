@@ -101,7 +101,7 @@ html, body {
     height: 100vh;            
     object-fit: cover;        
     object-position: center;  
-    display: block;           
+              
   }
 
 .title-label {
